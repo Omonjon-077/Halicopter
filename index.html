@@ -1,0 +1,385 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://unpkg.com/swiper@7/swiper-bundle.min.css" />
+    <link rel="stylesheet" href="style/main.css">
+    <title>Document</title>
+</head>
+
+<body>
+    <header class="header" id="header">
+        <svg style="display: none;">
+    <symbol id="search" width="34" height="35" viewBox="0 0 34 35" xmlns="http://www.w3.org/2000/svg">
+        <path
+            d="M12.9428 3.82892e-08C15.4187 -5.32543e-05 17.8427 0.710142 19.9272 2.04632C22.0117 3.38251 23.6691 5.28859 24.7028 7.53843C25.7366 9.78826 26.1033 12.2874 25.7593 14.7394C25.4154 17.1913 24.3754 19.4932 22.7626 21.3718L34 32.6093L32.5923 34.0169L21.3529 22.7775C19.7678 24.133 17.8785 25.0854 15.846 25.5534C13.8136 26.0215 11.6981 25.9914 9.67971 25.4657C7.66136 24.94 5.79998 23.9342 4.25408 22.5341C2.70818 21.134 1.52357 19.381 0.801143 17.4245C0.0787156 15.4679 -0.160128 13.3657 0.104955 11.2969C0.370038 9.22814 1.13119 7.25408 2.3236 5.54286C3.516 3.83165 5.10432 2.43397 6.95328 1.46887C8.80224 0.503769 10.8571 -0.000160382 12.9428 3.82892e-08ZM12.9428 1.99104C10.0384 1.99104 7.25309 3.14477 5.19943 5.19843C3.14577 7.25209 1.99204 10.0374 1.99204 12.9418C1.99204 15.8461 3.14577 18.6314 5.19943 20.6851C7.25309 22.7387 10.0384 23.8925 12.9428 23.8925C15.8471 23.8925 18.6324 22.7387 20.6861 20.6851C22.7397 18.6314 23.8935 15.8461 23.8935 12.9418C23.8935 10.0374 22.7397 7.25209 20.6861 5.19843C18.6324 3.14477 15.8471 1.99104 12.9428 1.99104Z" />
+    </symbol>
+    <symbol id="stat" width="33" height="34" viewBox="0 0 33 34" xmlns="http://www.w3.org/2000/svg">
+        <rect x="13" y="1" width="7" height="32" stroke="white" stroke-width="2" />
+        <rect x="1" y="16" width="7" height="17" stroke="white" stroke-width="2" />
+        <rect x="25" y="8" width="7" height="25" stroke="white" stroke-width="2" />
+    </symbol>
+    <symbol id="arrow-down" width="23" height="50" viewBox="0 0 23 50" xmlns="http://www.w3.org/2000/svg">
+        <path
+            d="M12.3846 0L12.3846 45.5812L21.6731 34.8321L23 36.1916L11.5 49.5L0 36.1916L1.32692 34.8321L10.6154 45.5812L10.6154 0L12.3846 0Z" />
+    </symbol>
+    <symbol id="facebook" width="34" height="34" viewBox="0 0 34 34" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <path
+            d="M31.1666 0H2.83336C1.24664 0 0 1.24664 0 2.83336V31.1667C0 32.7534 1.24664 34 2.83336 34H15.8667H22.6667H31.1667C32.7534 34 34 32.7534 34 31.1666V2.83336C34 1.24664 32.7534 0 31.1666 0ZM17 32.8666V21.5334H12.4666V17H17V13.0334C17 9.80336 19.4934 7.08336 22.6666 6.8H27.7666V11.3334H23.2333C22.2699 11.3334 21.5333 12.07 21.5333 13.0334V17H27.2V21.5334H21.5334V32.8667H17V32.8666ZM32.8666 31.1666C32.8666 32.13 32.13 32.8666 31.1666 32.8666H22.6666V22.6666H28.3333V15.8666H22.6666V13.0333C22.6666 12.6933 22.8933 12.4666 23.2333 12.4666H28.9V5.66664H22.61C18.8134 6.00664 15.8666 9.23664 15.8666 13.0333V15.8666H11.3333V22.6666H15.8666V32.8666H2.83336C1.87 32.8666 1.13336 32.13 1.13336 31.1666V2.83336C1.13336 1.87 1.87 1.13336 2.83336 1.13336H31.1667C32.1301 1.13336 32.8667 1.87 32.8667 2.83336V31.1666H32.8666Z"
+            fill="#C4C4C4" />
+    </symbol>
+    <symbol id="youtube" width="34" height="27" viewBox="0 0 34 27" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <rect x="0.7" y="0.842853" width="32.6" height="24.95" rx="2.3" stroke="#C4C4C4" stroke-width="1.4" />
+        <path
+            d="M24.1469 11.6043C26.0847 12.3715 26.0847 15.1142 24.1469 15.8814L12.9843 20.3006C11.4746 20.8983 9.8377 19.7858 9.8377 18.1621V9.32363C9.8377 7.69994 11.4746 6.58744 12.9843 7.18512L24.1469 11.6043Z"
+            stroke="#C4C4C4" stroke-width="1.4" />
+    </symbol>
+    <symbol id="insta" width="34" height="35" viewBox="0 0 34 35" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <rect x="0.7" y="1.33571" width="32.6" height="32.6" rx="2.3" stroke="#C4C4C4" stroke-width="1.4" />
+        <circle cx="16.9999" cy="17.6357" r="8.65" stroke="#C4C4C4" stroke-width="1.4" />
+        <circle cx="27.6249" cy="7.01071" r="2.275" stroke="#C4C4C4" stroke-width="1.4" />
+    </symbol>
+    <symbol id="speed" width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <path
+            d="M27.1732 11.4267L25.5332 13.8933C26.3241 15.4708 26.7113 17.2198 26.6601 18.9836C26.6089 20.7475 26.1209 22.4711 25.2398 24H6.75982C5.61471 22.0135 5.14022 19.7108 5.40668 17.4334C5.67314 15.156 6.66637 13.0251 8.23913 11.3566C9.81189 9.68803 11.8804 8.57071 14.1381 8.17025C16.3958 7.76979 18.7225 8.1075 20.7732 9.13332L23.2398 7.49332C20.7285 5.88294 17.7496 5.16133 14.7797 5.4439C11.8098 5.72648 9.02042 6.99692 6.85781 9.052C4.69521 11.1071 3.28431 13.8281 2.85078 16.7797C2.41725 19.7314 2.98616 22.7432 4.46649 25.3333C4.69917 25.7364 5.03327 26.0715 5.4356 26.3054C5.83792 26.5393 6.29445 26.6638 6.75982 26.6667H25.2265C25.6964 26.6685 26.1584 26.5462 26.5658 26.312C26.9732 26.0779 27.3115 25.7403 27.5465 25.3333C28.775 23.2052 29.3915 20.779 29.328 18.3226C29.2645 15.8662 28.5233 13.4751 27.1865 11.4133L27.1732 11.4267ZM14.1198 20.5467C14.3675 20.7946 14.6616 20.9913 14.9853 21.1255C15.309 21.2597 15.656 21.3288 16.0065 21.3288C16.3569 21.3288 16.7039 21.2597 17.0277 21.1255C17.3514 20.9913 17.6455 20.7946 17.8932 20.5467L25.4398 9.22666L14.1198 16.7733C13.8719 17.021 13.6752 17.3151 13.541 17.6388C13.4068 17.9625 13.3377 18.3095 13.3377 18.66C13.3377 19.0104 13.4068 19.3574 13.541 19.6812C13.6752 20.0049 13.8719 20.299 14.1198 20.5467Z"
+            fill="#919191" />
+    </symbol>
+    <symbol id="seat" width="26" height="26" viewBox="0 0 26 26" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <g clip-path="url(#clip0)">
+            <path
+                d="M21.6385 5.38066C20.462 6.19966 18.8435 5.91368 18.0245 4.74368C17.1989 3.56716 17.485 1.94866 18.6614 1.1232C19.838 0.29768 21.4565 0.58366 22.282 1.76018C23.101 2.93664 22.8149 4.55514 21.6385 5.38066Z"
+                fill="#919191" />
+            <path
+                d="M20.8455 19.4467L23.4 7.14868H26L23.4065 19.8302C22.9255 23.0022 20.1955 25.3487 16.9845 25.3487H7.79999V22.7487H16.991C18.915 22.7486 20.553 21.3446 20.8455 19.4467Z"
+                fill="#919191" />
+            <path
+                d="M7.50117 17.5487H13.8451L15.1776 12.2186C13.1301 13.3757 10.9137 14.2271 8.48263 13.8047V11.0422C10.6016 11.4387 12.9546 10.6847 14.5796 9.42368L16.7181 7.75966C17.0106 7.53218 17.3551 7.36966 17.7126 7.26564C18.1221 7.14864 18.5641 7.11616 18.9996 7.18764L19.0321 7.19416C20.6245 7.47368 21.6906 8.98816 21.4111 10.5806L19.6495 18.2766C19.2985 20.1161 17.693 21.4486 15.821 21.4486H6.91605L1.95007 25.3486L7.24792e-05 23.3986L7.50117 17.5487Z"
+                fill="#919191" />
+        </g>
+        <defs>
+            <clipPath id="clip0">
+                <rect width="26" height="26" fill="white" transform="matrix(-1 0 0 1 26 0)" />
+            </clipPath>
+        </defs>
+    </symbol>
+    <symbol id="track" width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <g clip-path="url(#clip0)">
+            <path
+                d="M5.38893 9.61386C5.04974 9.61386 4.77368 9.88986 4.77368 10.2291C4.77368 10.5684 5.04968 10.8444 5.38893 10.8444C5.72818 10.8444 6.00418 10.5684 6.00418 10.2291C6.00418 9.88986 5.72812 9.61386 5.38893 9.61386Z"
+                fill="#919191" />
+            <path
+                d="M5.38893 4.84012C2.4175 4.84012 0 7.25761 0 10.229C0 11.701 0.802936 13.6242 2.38643 15.9453C3.51931 17.6058 4.63755 18.8615 4.68455 18.9142C4.8638 19.1147 5.11999 19.2293 5.38893 19.2293C5.65786 19.2293 5.91405 19.1147 6.0933 18.9142C6.14036 18.8615 7.25855 17.6058 8.39142 15.9453C9.97498 13.6243 10.7779 11.701 10.7779 10.229C10.7779 7.25761 8.36036 4.84012 5.38893 4.84012ZM5.38893 12.7336C4.00793 12.7336 2.88437 11.61 2.88437 10.229C2.88437 8.84799 4.00793 7.72449 5.38893 7.72449C6.76999 7.72449 7.89348 8.84805 7.89348 10.229C7.89355 11.61 6.76992 12.7336 5.38893 12.7336Z"
+                fill="#919191" />
+            <path
+                d="M22.276 25.2704H19.9251C18.2596 25.2704 16.9045 23.9154 16.9045 22.2499C16.9045 19.5425 14.7019 17.3399 11.9946 17.3399H9.72375C9.20194 18.0835 8.69457 18.7374 8.29663 19.2293H11.9947C13.6602 19.2293 15.0152 20.5843 15.0152 22.2499C15.0152 24.9572 17.2179 27.1598 19.9252 27.1598H23.7031C23.3051 26.6679 22.7977 26.0139 22.276 25.2704Z"
+                fill="#919191" />
+            <path
+                d="M26.6111 17.5443C26.2718 17.5443 25.9958 17.8203 25.9958 18.1596C25.9958 18.4988 26.2718 18.7748 26.6111 18.7748C26.9503 18.7748 27.2263 18.4988 27.2263 18.1596C27.2263 17.8203 26.9503 17.5443 26.6111 17.5443Z"
+                fill="#919191" />
+            <path
+                d="M26.611 12.7707C23.6396 12.7707 21.2222 15.1882 21.2222 18.1595C21.2222 19.6316 22.0251 21.5548 23.6086 23.8759C24.7415 25.5363 25.8597 26.7921 25.9067 26.8447C26.086 27.0452 26.3421 27.1598 26.6111 27.1598C26.8801 27.1598 27.1362 27.0452 27.3155 26.8447C27.3626 26.7921 28.4808 25.5364 29.6136 23.8759C31.1971 21.5549 32 19.6316 32 18.1595C32 15.1881 29.5825 12.7707 26.611 12.7707ZM26.611 20.6641C25.23 20.6641 24.1065 19.5406 24.1065 18.1596C24.1065 16.7785 25.23 15.655 26.611 15.655C27.992 15.655 29.1156 16.7786 29.1156 18.1596C29.1156 19.5406 27.9921 20.6641 26.611 20.6641Z"
+                fill="#919191" />
+        </g>
+        <defs>
+            <clipPath id="clip0">
+                <rect width="32" height="32" fill="white" />
+            </clipPath>
+        </defs>
+    </symbol>
+
+</svg>
+        <nav class="header__nav">
+    <div class="container header__nav-container">
+        <a href="#header" class="header__logo"><img src="./images/Logo.svg" alt=""></a>
+        <ul class="header__list">
+            <li class="header__item"><a href="#models" class="header__link">Модели</a></li>
+            <li class="header__item"><a href="" class="header__link">Обзор вертолетов</a></li>
+            <li class="header__item"><a href="" class="header__link">О компании</a></li>
+            <li class="header__item"><a href="" class="header__link">Преимущества</a></li>
+            <li class="header__item"><a href="" class="header__link">Калькулятор</a></li>
+            <li class="header__item"><a href="" class="header__link">Услуги</a></li>
+            <li class="header__item"><a href="" class="header__link">Новости</a></li>
+        </ul>
+        <ul class="header__list">
+            <li class="header__item-lang"><a href="" class="header__link-2">eng</a></li>
+            <li class="header__item-lang active"><a href="" class="header__link-2">rus</a></li>
+            <li class="header__item amount"><a href="" class="header__link-2">
+                    <svg width="33" height="34" fill="transparent">
+                        <use xlink:href="#stat"></use>
+                    </svg>
+                </a></li>
+            <li class="header__item"><a href="" class="header__link-2">
+                    <svg width="34" height="35" fill="#fff">
+                        <use xlink:href="#search"></use>
+                    </svg>
+                </a></li>
+
+        </ul>
+    </div>
+</nav>
+<aside class="aside">
+    <button class="aside-btn">
+        <span class="aside__line"></span>
+    </button>
+    <a href="" class="aside__link">
+        <span>Листайте дальше</span>
+        <svg width="23" height="50" fill="#C4C4C4">
+            <use xlink:href="#arrow-down"></use>
+        </svg>
+    </a>
+</aside>
+<nav class="burger">
+    <a href="" class="burger__logo"><img src="images/Logo.svg" alt="yozish shart emas"></a>
+    <span class="burger__close"></span>
+    <ul class="burger__list">
+        <li class="burger__item"><a href="" class="burger__link">История компании</a></li>
+        <li class="burger__item"><a href="" class="burger__link">Каталог вертолетов</a></li>
+        <li class="burger__item"><a href="" class="burger__link">Каталог запчастей</a></li>
+        <li class="burger__item"><a href="" class="burger__link">Конфигуратор</a></li>
+        <li class="burger__item"><a href="" class="burger__link">Новости</a></li>
+        <li class="burger__item"><a href="" class="burger__link">Обслуживание</a></li>
+        <li class="burger__item"><a href="" class="burger__link">Техническая информация</a></li>
+        <li class="burger__item"><a href="" class="burger__link">Услуги</a></li>
+    </ul>
+    <ul class="burger__list">
+        <li class="burger__item"><a href="" class="burger__link">+7 (495) 723-44-44</a></li>
+        <li class="burger__item"><a href="" class="burger__link">+7 (963) 777-57-57</a></li>
+        <li class="burger__item"><a href="" class="burger__link">info@aerounion.msk.ru</a></li>
+        <li class="burger__item"><a href="" class="burger__link">Координаты: N56.12695 E037.0695</a></li>
+        <li class="burger__item"><a href="" class="burger__link">Частота радиосвязи: 123.9 Мгц - UUCH</a></li>
+    </ul>
+</nav>
+        <img src="images/1.webp" alt="" class="header__banner">
+        <div class="header__content">
+            <div class="container">
+                <h1 class="header__title">
+                    Успейте купить
+                    <span class="header__title-extra">Robinson R44, R66</span>
+                </h1>
+                <p class="header__txt">Желающие приобрести вертолет могут оформить заказ по действующим ценам до
+                    очередного ежегодного повышения цен в январе 2021 года</p>
+                <a href="" class="header__btn btn">Оформить заказ</a>
+            </div>
+        </div>
+        <div class="container header__container">
+            <div class="header__social">
+                <a href="" class="header__social-link">
+                    <svg width="34" height="34">
+                        <use xlink:href="#facebook"></use>
+                    </svg>
+                </a>
+                <a href="" class="header__social-link">
+                    <svg width="34" height="27">
+                        <use xlink:href="#youtube"></use>
+                    </svg>
+                </a>
+                <a href="" class="header__social-link">
+                    <svg width="34" height="35">
+                        <use xlink:href="#insta"></use>
+                    </svg>
+                </a>
+            </div>
+        </div>
+    </header>
+    <main>
+        <section class="models" id="models">
+            <div class="container">
+                <div class="models__carousel">
+                    <div class="swiper models__swiper">
+                        <div class="swiper-wrapper">
+                            <div class="swiper-slide">
+                                <div class="models__box">
+                                    <div class="models__image">
+                                        <h3 class="models__title">Robinson R44
+                                            <svg width="33" height="34" fill="transparent">
+                                                <use xlink:href="#stat"></use>
+                                            </svg>
+                                        </h3>
+                                        <img src="images/R44.webp" alt="" class="models__img">
+                                    </div>
+                                    <div class="models__dest">
+                                        <p class="models__txt">
+                                            <svg width="32" height="32">
+                                                <use xlink:href="#speed"></use>
+                                            </svg>
+                                            240 км/ч
+                                        </p>
+                                        <p class="models__txt">
+                                            <svg width="26" height="26">
+                                                <use xlink:href="#seat"></use>
+                                            </svg>
+                                            3+1 пасс
+                                        </p>
+                                        <p class="models__txt">
+                                            <svg width="32" height="32">
+                                                <use xlink:href="#track"></use>
+                                            </svg>
+                                            650 км
+                                        </p>
+                                        <a href="" class="models__btn">Подробнее</a>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="swiper-slide">
+                                <div class="models__box">
+                                    <div class="models__image">
+                                        <h3 class="models__title">Robinson R44
+                                            <svg width="33" height="34" fill="transparent">
+                                                <use xlink:href="#stat"></use>
+                                            </svg>
+                                        </h3>
+                                        <img src="images/R44.webp" alt="" class="models__img">
+                                    </div>
+                                    <div class="models__dest">
+                                        <p class="models__txt">
+                                            <svg width="32" height="32">
+                                                <use xlink:href="#speed"></use>
+                                            </svg>
+                                            240 км/ч
+                                        </p>
+                                        <p class="models__txt">
+                                            <svg width="26" height="26">
+                                                <use xlink:href="#seat"></use>
+                                            </svg>
+                                            3+1 пасс
+                                        </p>
+                                        <p class="models__txt">
+                                            <svg width="32" height="32">
+                                                <use xlink:href="#track"></use>
+                                            </svg>
+                                            650 км
+                                        </p>
+                                        <a href="" class="models__btn">Подробнее</a>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="swiper-slide">
+                                <div class="models__box">
+                                    <div class="models__image">
+                                        <h3 class="models__title">Robinson R44
+                                            <svg width="33" height="34" fill="transparent">
+                                                <use xlink:href="#stat"></use>
+                                            </svg>
+                                        </h3>
+                                        <img src="images/R44.webp" alt="" class="models__img">
+                                    </div>
+                                    <div class="models__dest">
+                                        <p class="models__txt">
+                                            <svg width="32" height="32">
+                                                <use xlink:href="#speed"></use>
+                                            </svg>
+                                            240 км/ч
+                                        </p>
+                                        <p class="models__txt">
+                                            <svg width="26" height="26">
+                                                <use xlink:href="#seat"></use>
+                                            </svg>
+                                            3+1 пасс
+                                        </p>
+                                        <p class="models__txt">
+                                            <svg width="32" height="32">
+                                                <use xlink:href="#track"></use>
+                                            </svg>
+                                            650 км
+                                        </p>
+                                        <a href="" class="models__btn">Подробнее</a>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="swiper-slide">
+                                <div class="models__box">
+                                    <div class="models__image">
+                                        <h3 class="models__title">Robinson R44
+                                            <svg width="33" height="34" fill="transparent">
+                                                <use xlink:href="#stat"></use>
+                                            </svg>
+                                        </h3>
+                                        <img src="images/R44.webp" alt="" class="models__img">
+                                    </div>
+                                    <div class="models__dest">
+                                        <p class="models__txt">
+                                            <svg width="32" height="32">
+                                                <use xlink:href="#speed"></use>
+                                            </svg>
+                                            240 км/ч
+                                        </p>
+                                        <p class="models__txt">
+                                            <svg width="26" height="26">
+                                                <use xlink:href="#seat"></use>
+                                            </svg>
+                                            3+1 пасс
+                                        </p>
+                                        <p class="models__txt">
+                                            <svg width="32" height="32">
+                                                <use xlink:href="#track"></use>
+                                            </svg>
+                                            650 км
+                                        </p>
+                                        <a href="" class="models__btn">Подробнее</a>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="swiper-slide">
+                                <div class="models__box">
+                                    <div class="models__image">
+                                        <h3 class="models__title">Robinson R44
+                                            <svg width="33" height="34" fill="transparent">
+                                                <use xlink:href="#stat"></use>
+                                            </svg>
+                                        </h3>
+                                        <img src="images/R44.webp" alt="" class="models__img">
+                                    </div>
+                                    <div class="models__dest">
+                                        <p class="models__txt">
+                                            <svg width="32" height="32">
+                                                <use xlink:href="#speed"></use>
+                                            </svg>
+                                            240 км/ч
+                                        </p>
+                                        <p class="models__txt">
+                                            <svg width="26" height="26">
+                                                <use xlink:href="#seat"></use>
+                                            </svg>
+                                            3+1 пасс
+                                        </p>
+                                        <p class="models__txt">
+                                            <svg width="32" height="32">
+                                                <use xlink:href="#track"></use>
+                                            </svg>
+                                            650 км
+                                        </p>
+                                        <a href="" class="models__btn">Подробнее</a>
+                                    </div>
+                                </div>
+                            </div>
+                          
+                        </div>
+                       
+                    </div>
+                    <div class="models__controls">
+                        <div class="swiper-button-prev models__controls-prev"></div>
+                        <div class="swiper-pagination"></div>
+                        <div class="swiper-button-next models__controls-next"></div>
+                    </div>
+                </div>
+                <div class="models__content">
+                    <h2 class="models__content-title">
+                        <span class="models__content-extra">Много информации - не знаете</span>
+                        Что лучше выбрать?</h2>
+                        <p class="models__content-txt">Оставьте заявку, мы перезвоним вам и ответим на все ваши вопросы</p>
+                        <div class="models__content-btns">
+                            <a href="" class="models__content-btn btn">Оставить заявку</a>
+                            <a href="" class="models__content-btn btn">Все модели</a>
+                        </div>
+                </div>
+            </div>
+        </section>
+    </main>
+    <script src="https://unpkg.com/swiper@7/swiper-bundle.min.js"></script>
+    <script src="script/main.js"></script>
+</body>
+
+</html>
